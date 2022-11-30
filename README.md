@@ -21,7 +21,9 @@ npm install @azns/resolver
 Use it:
 
 ```ts
-TODO
+import { resolveName } from '@azns/resolver'
+
+const address = await resolveName('wojak')
 ```
 
 ## Development
