@@ -1,6 +1,6 @@
 {
   "name": "@azns/resolver",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.1",
   "license": "MIT",
   "description": "Typescript package for resolving .azero domains.",
   "author": "AZERO Domains <hello@azero.domains> (https://azero.domains)",
@@ -13,6 +13,11 @@
     "url": "https://github.com/azero-domains/resolver/issues"
   },
   "main": "dist/index.js",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist"
+  ],
   "scripts": {
     "build": "tsup --dts && npm run typedoc",
     "typedoc": "typedoc src/index.ts",
