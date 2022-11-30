@@ -12,13 +12,16 @@
   </head>
   <body>
     <script>
-      document.documentElement.dataset.theme = localStorage.getItem('tsd-theme') || 'os'
+      document.documentElement.dataset.theme =
+        localStorage.getItem('tsd-theme') || 'os'
     </script>
     <header class="tsd-page-toolbar">
       <div class="tsd-toolbar-contents container">
         <div class="table-cell" id="tsd-search" data-base=".">
           <div class="field">
-            <label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"
+            <label
+              for="tsd-search-field"
+              class="tsd-widget tsd-toolbar-icon search no-caption"
               ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
                   d="M15.7824 13.833L12.6666 10.7177C12.5259 10.5771 12.3353 10.499 12.1353 10.499H11.6259C12.4884 9.39596 13.001 8.00859 13.001 6.49937C13.001 2.90909 10.0914 0 6.50048 0C2.90959 0 0 2.90909 0 6.49937C0 10.0896 2.90959 12.9987 6.50048 12.9987C8.00996 12.9987 9.39756 12.4863 10.5008 11.6239V12.1332C10.5008 12.3332 10.5789 12.5238 10.7195 12.6644L13.8354 15.7797C14.1292 16.0734 14.6042 16.0734 14.8948 15.7797L15.7793 14.8954C16.0731 14.6017 16.0731 14.1267 15.7824 13.833ZM6.50048 10.499C4.29094 10.499 2.50018 8.71165 2.50018 6.49937C2.50018 4.29021 4.28781 2.49976 6.50048 2.49976C8.71001 2.49976 10.5008 4.28708 10.5008 6.49937C10.5008 8.70852 8.71314 10.499 6.50048 10.499Z"
@@ -42,9 +45,27 @@
             data-toggle="menu"
             aria-label="Menu"
             ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <rect x="1" y="3" width="14" height="2" fill="var(--color-text)"></rect>
-              <rect x="1" y="7" width="14" height="2" fill="var(--color-text)"></rect>
-              <rect x="1" y="11" width="14" height="2" fill="var(--color-text)"></rect></svg
+              <rect
+                x="1"
+                y="3"
+                width="14"
+                height="2"
+                fill="var(--color-text)"
+              ></rect>
+              <rect
+                x="1"
+                y="7"
+                width="14"
+                height="2"
+                fill="var(--color-text)"
+              ></rect>
+              <rect
+                x="1"
+                y="11"
+                width="14"
+                height="2"
+                fill="var(--color-text)"
+              ></rect></svg
           ></a>
         </div>
       </div>
@@ -54,7 +75,70 @@
         <div class="tsd-page-title">
           <h2>@azns/resolver</h2>
         </div>
-        <div class="tsd-panel tsd-typography"></div>
+        <div class="tsd-panel tsd-typography">
+          <a
+            href="#azero-domains--resolver"
+            id="azero-domains--resolver"
+            style="color: inherit; text-decoration: none"
+          >
+            <h1>AZERO Domains – Resolver</h1>
+          </a>
+          <p>
+            <img
+              src="https://img.shields.io/badge/Typescript-blue"
+              alt="Typescript"
+            />
+          </p>
+          <p>
+            This repository contains a simple Typescript package to resolve
+            <code>.azero</code> domains issued by
+            <a href="https://azero.domains">AZERO Domains</a>. It supports
+            resolving domains to their associated SS58 addresses and the other
+            way around.
+          </p>
+          <p>
+            The documentation can be found here:
+            <a href="https://azero-domains.github.io/resolver/"
+              >https://azero-domains.github.io/resolver/</a
+            >.
+          </p>
+
+          <a
+            href="#disclaimer-🚨"
+            id="disclaimer-🚨"
+            style="color: inherit; text-decoration: none"
+          >
+            <h2>Disclaimer 🚨</h2>
+          </a>
+          <p>
+            This package uses a testnet RPC and contracts. It&#39;s not ready
+            for production use yet.
+          </p>
+
+          <a
+            href="#getting-started"
+            id="getting-started"
+            style="color: inherit; text-decoration: none"
+          >
+            <h2>Getting Started</h2>
+          </a>
+          <p>Install the package from the npm registry:</p>
+          <pre><code class="language-bash"><span class="hl-0">npm install @azns/resolver</span>
+</code></pre>
+          <p>Use it:</p>
+          <pre><code class="language-ts"><span class="hl-1">TODO</span>
+</code></pre>
+
+          <a
+            href="#development"
+            id="development"
+            style="color: inherit; text-decoration: none"
+          >
+            <h2>Development</h2>
+          </a>
+          <pre><code class="language-bash"><span class="hl-2"># Install dependencies</span><br/><span class="hl-0">npm i</span><br/><br/><span class="hl-2"># Start tsup in development mode (watching)</span><br/><span class="hl-0">npm run dev</span><br/><br/><span class="hl-2"># Build the package and generated docs</span><br/><span class="hl-0">npm run build</span>
+</code></pre>
+        </div>
       </div>
       <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
         <div class="tsd-navigation settings">
@@ -77,7 +161,11 @@
                   <ul id="tsd-filter-options">
                     <li class="tsd-filter-item">
                       <label class="tsd-filter-input"
-                        ><input type="checkbox" id="tsd-filter-protected" name="protected" /><svg
+                        ><input
+                          type="checkbox"
+                          id="tsd-filter-protected"
+                          name="protected"
+                        /><svg
                           width="32"
                           height="32"
                           viewBox="0 0 32 32"
@@ -105,7 +193,11 @@
                     </li>
                     <li class="tsd-filter-item">
                       <label class="tsd-filter-input"
-                        ><input type="checkbox" id="tsd-filter-private" name="private" /><svg
+                        ><input
+                          type="checkbox"
+                          id="tsd-filter-private"
+                          name="private"
+                        /><svg
                           width="32"
                           height="32"
                           viewBox="0 0 32 32"
@@ -138,7 +230,12 @@
                           id="tsd-filter-inherited"
                           name="inherited"
                           checked
-                        /><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                        /><svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          aria-hidden="true"
+                        >
                           <rect
                             class="tsd-checkbox-background"
                             width="30"
@@ -161,7 +258,11 @@
                     </li>
                     <li class="tsd-filter-item">
                       <label class="tsd-filter-input"
-                        ><input type="checkbox" id="tsd-filter-external" name="external" /><svg
+                        ><input
+                          type="checkbox"
+                          id="tsd-filter-external"
+                          name="external"
+                        /><svg
                           width="32"
                           height="32"
                           viewBox="0 0 32 32"
@@ -227,8 +328,13 @@
         <nav class="tsd-navigation secondary menu-sticky">
           <ul>
             <li class="tsd-kind-function">
-              <a href="functions/testFunction.html" class="tsd-index-link"
-                ><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24">
+              <a href="functions/resolveName.html" class="tsd-index-link"
+                ><svg
+                  class="tsd-kind-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
                   <rect
                     fill="var(--color-icon-background)"
                     stroke="var(--color-ts-function)"
@@ -245,7 +351,7 @@
                     fill="var(--color-text)"
                     id="icon-64-text"
                   ></path></svg
-                >test<wbr />Function</a
+                >resolve<wbr />Name</a
               >
             </li>
           </ul>
@@ -253,7 +359,10 @@
       </div>
     </div>
     <div class="container tsd-generator">
-      <p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+      <p>
+        Generated using
+        <a href="https://typedoc.org/" target="_blank">TypeDoc</a>
+      </p>
     </div>
     <div class="overlay"></div>
     <script src="assets/main.js"></script>

@@ -2,9 +2,13 @@
 
 ![Typescript](https://img.shields.io/badge/Typescript-blue)
 
-This repository contains a simple Typescript package to resolve `.azero` domains issued by [AZERO Domains](https://azero.domains). It supports resolving domains to their associated SS58 addresses as well as the other way around.
+This repository contains a simple Typescript package to resolve `.azero` domains issued by [AZERO Domains](https://azero.domains). It supports resolving domains to their associated SS58 addresses and the other way around.
 
 The documentation can be found here: https://azero-domains.github.io/resolver/.
+
+## Disclaimer 🚨
+
+This package uses a testnet RPC and contracts. It's not ready for production use yet.
 
 ## Getting Started
 

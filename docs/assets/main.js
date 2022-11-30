@@ -13,12 +13,20 @@
       for (let i of Ce(e))
         !Re.call(t, i) &&
           i !== n &&
-          ae(t, i, { get: () => e[i], enumerable: !(r = Pe(e, i)) || r.enumerable })
+          ae(t, i, {
+            get: () => e[i],
+            enumerable: !(r = Pe(e, i)) || r.enumerable,
+          })
     return t
   }
   var De = (t, e, n) => (
     (n = t != null ? Qe(Oe(t)) : {}),
-    Me(e || !t || !t.__esModule ? ae(n, 'default', { value: t, enumerable: !0 }) : n, t)
+    Me(
+      e || !t || !t.__esModule
+        ? ae(n, 'default', { value: t, enumerable: !0 })
+        : n,
+      t,
+    )
   )
   var de = _e((ce, he) => {
     ;(function () {
@@ -43,18 +51,28 @@
         }),
         (t.utils.clone = function (e) {
           if (e == null) return e
-          for (var n = Object.create(null), r = Object.keys(e), i = 0; i < r.length; i++) {
+          for (
+            var n = Object.create(null), r = Object.keys(e), i = 0;
+            i < r.length;
+            i++
+          ) {
             var s = r[i],
               o = e[s]
             if (Array.isArray(o)) {
               n[s] = o.slice()
               continue
             }
-            if (typeof o == 'string' || typeof o == 'number' || typeof o == 'boolean') {
+            if (
+              typeof o == 'string' ||
+              typeof o == 'number' ||
+              typeof o == 'boolean'
+            ) {
               n[s] = o
               continue
             }
-            throw new TypeError('clone is not deep and does not support nested objects')
+            throw new TypeError(
+              'clone is not deep and does not support nested objects',
+            )
           }
           return n
         }),
@@ -72,7 +90,8 @@
         (t.FieldRef.prototype.toString = function () {
           return (
             this._stringValue == null &&
-              (this._stringValue = this.fieldName + t.FieldRef.joiner + this.docRef),
+              (this._stringValue =
+                this.fieldName + t.FieldRef.joiner + this.docRef),
             this._stringValue
           )
         })
@@ -114,7 +133,9 @@
             s = []
           if (e === t.Set.complete) return this
           if (e === t.Set.empty) return e
-          this.length < e.length ? ((n = this), (r = e)) : ((n = e), (r = this)),
+          this.length < e.length
+            ? ((n = this), (r = e))
+            : ((n = e), (r = this)),
             (i = Object.keys(n.elements))
           for (var o = 0; o < i.length; o++) {
             var a = i[o]
@@ -127,7 +148,9 @@
             ? t.Set.complete
             : e === t.Set.empty
             ? this
-            : new t.Set(Object.keys(this.elements).concat(Object.keys(e.elements)))
+            : new t.Set(
+                Object.keys(this.elements).concat(Object.keys(e.elements)),
+              )
         }),
         (t.idf = function (e, n) {
           var r = 0
@@ -158,15 +181,28 @@
         if (e == null || e == null) return []
         if (Array.isArray(e))
           return e.map(function (m) {
-            return new t.Token(t.utils.asString(m).toLowerCase(), t.utils.clone(n))
+            return new t.Token(
+              t.utils.asString(m).toLowerCase(),
+              t.utils.clone(n),
+            )
           })
-        for (var r = e.toString().toLowerCase(), i = r.length, s = [], o = 0, a = 0; o <= i; o++) {
+        for (
+          var r = e.toString().toLowerCase(),
+            i = r.length,
+            s = [],
+            o = 0,
+            a = 0;
+          o <= i;
+          o++
+        ) {
           var u = r.charAt(o),
             l = o - a
           if (u.match(t.tokenizer.separator) || o == i) {
             if (l > 0) {
               var h = t.utils.clone(n) || {}
-              ;(h.position = [a, l]), (h.index = s.length), s.push(new t.Token(r.slice(a, o), h))
+              ;(h.position = [a, l]),
+                (h.index = s.length),
+                s.push(new t.Token(r.slice(a, o), h))
             }
             a = o + 1
           }
@@ -231,7 +267,8 @@
             for (var i = this._stack[r], s = [], o = 0; o < e.length; o++) {
               var a = i(e[o], o, e)
               if (!(a == null || a === ''))
-                if (Array.isArray(a)) for (var u = 0; u < a.length; u++) s.push(a[u])
+                if (Array.isArray(a))
+                  for (var u = 0; u < a.length; u++) s.push(a[u])
                 else s.push(a)
             }
             e = s
@@ -352,7 +389,15 @@
             biliti: 'ble',
             logi: 'log',
           },
-          n = { icate: 'ic', ative: '', alize: 'al', iciti: 'ic', ical: 'ic', ful: '', ness: '' },
+          n = {
+            icate: 'ic',
+            ative: '',
+            alize: 'al',
+            iciti: 'ic',
+            ical: 'ic',
+            ful: '',
+            ness: '',
+          },
           r = '[^aeiou]',
           i = '[aeiouy]',
           s = r + '[^aeiouy]*',
@@ -377,7 +422,8 @@
           q =
             /^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$/,
           $ = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
-          V = /^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$/,
+          V =
+            /^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$/,
           W = /^(.+?)(s|t)(ion)$/,
           P = /^(.+?)e$/,
           U = /ll$/,
@@ -390,7 +436,9 @@
               T == 'y' && (c = T.toUpperCase() + c.substr(1)),
               (d = E),
               (x = f),
-              d.test(c) ? (c = c.replace(d, '$1$2')) : x.test(c) && (c = c.replace(x, '$1$2')),
+              d.test(c)
+                ? (c = c.replace(d, '$1$2'))
+                : x.test(c) && (c = c.replace(x, '$1$2')),
               (d = p),
               (x = w),
               d.test(c))
@@ -596,7 +644,12 @@
       }),
         (t.TokenSet._nextId = 1),
         (t.TokenSet.fromArray = function (e) {
-          for (var n = new t.TokenSet.Builder(), r = 0, i = e.length; r < i; r++) n.insert(e[r])
+          for (
+            var n = new t.TokenSet.Builder(), r = 0, i = e.length;
+            r < i;
+            r++
+          )
+            n.insert(e[r])
           return n.finish(), n.root
         }),
         (t.TokenSet.fromClause = function (e) {
@@ -605,7 +658,12 @@
             : t.TokenSet.fromString(e.term)
         }),
         (t.TokenSet.fromFuzzyString = function (e, n) {
-          for (var r = new t.TokenSet(), i = [{ node: r, editsRemaining: n, str: e }]; i.length; ) {
+          for (
+            var r = new t.TokenSet(),
+              i = [{ node: r, editsRemaining: n, str: e }];
+            i.length;
+
+          ) {
             var s = i.pop()
             if (s.str.length > 0) {
               var o = s.str.charAt(0),
@@ -614,7 +672,11 @@
                 ? (a = s.node.edges[o])
                 : ((a = new t.TokenSet()), (s.node.edges[o] = a)),
                 s.str.length == 1 && (a.final = !0),
-                i.push({ node: a, editsRemaining: s.editsRemaining, str: s.str.slice(1) })
+                i.push({
+                  node: a,
+                  editsRemaining: s.editsRemaining,
+                  str: s.str.slice(1),
+                })
             }
             if (s.editsRemaining != 0) {
               if ('*' in s.node.edges) var u = s.node.edges['*']
@@ -624,7 +686,11 @@
               }
               if (
                 (s.str.length == 0 && (u.final = !0),
-                i.push({ node: u, editsRemaining: s.editsRemaining - 1, str: s.str }),
+                i.push({
+                  node: u,
+                  editsRemaining: s.editsRemaining - 1,
+                  str: s.str,
+                }),
                 s.str.length > 1 &&
                   i.push({
                     node: s.node,
@@ -640,7 +706,11 @@
                   s.node.edges['*'] = l
                 }
                 s.str.length == 1 && (l.final = !0),
-                  i.push({ node: l, editsRemaining: s.editsRemaining - 1, str: s.str.slice(1) })
+                  i.push({
+                    node: l,
+                    editsRemaining: s.editsRemaining - 1,
+                    str: s.str.slice(1),
+                  })
               }
               if (s.str.length > 1) {
                 var h = s.str.charAt(0),
@@ -650,14 +720,22 @@
                   ? (v = s.node.edges[m])
                   : ((v = new t.TokenSet()), (s.node.edges[m] = v)),
                   s.str.length == 1 && (v.final = !0),
-                  i.push({ node: v, editsRemaining: s.editsRemaining - 1, str: h + s.str.slice(2) })
+                  i.push({
+                    node: v,
+                    editsRemaining: s.editsRemaining - 1,
+                    str: h + s.str.slice(2),
+                  })
               }
             }
           }
           return r
         }),
         (t.TokenSet.fromString = function (e) {
-          for (var n = new t.TokenSet(), r = n, i = 0, s = e.length; i < s; i++) {
+          for (
+            var n = new t.TokenSet(), r = n, i = 0, s = e.length;
+            i < s;
+            i++
+          ) {
             var o = e[i],
               a = i == s - 1
             if (o == '*') (n.edges[o] = n), (n.final = a)
@@ -684,7 +762,10 @@
         (t.TokenSet.prototype.toString = function () {
           if (this._str) return this._str
           for (
-            var e = this.final ? '1' : '0', n = Object.keys(this.edges).sort(), r = n.length, i = 0;
+            var e = this.final ? '1' : '0',
+              n = Object.keys(this.edges).sort(),
+              r = n.length,
+              i = 0;
             i < r;
             i++
           ) {
@@ -696,7 +777,9 @@
         }),
         (t.TokenSet.prototype.intersect = function (e) {
           for (
-            var n = new t.TokenSet(), r = void 0, i = [{ qNode: e, output: n, node: this }];
+            var n = new t.TokenSet(),
+              r = void 0,
+              i = [{ qNode: e, output: n, node: this }];
             i.length;
 
           ) {
@@ -719,7 +802,9 @@
                     f = void 0
                   v in r.output.edges
                     ? ((f = r.output.edges[v]), (f.final = f.final || E))
-                    : ((f = new t.TokenSet()), (f.final = E), (r.output.edges[v] = f)),
+                    : ((f = new t.TokenSet()),
+                      (f.final = E),
+                      (r.output.edges[v] = f)),
                     i.push({ qNode: y, output: f, node: b })
                 }
               }
@@ -735,10 +820,13 @@
         (t.TokenSet.Builder.prototype.insert = function (e) {
           var n,
             r = 0
-          if (e < this.previousWord) throw new Error('Out of order word insertion')
+          if (e < this.previousWord)
+            throw new Error('Out of order word insertion')
           for (
             var i = 0;
-            i < e.length && i < this.previousWord.length && e[i] == this.previousWord[i];
+            i < e.length &&
+            i < this.previousWord.length &&
+            e[i] == this.previousWord[i];
             i++
           )
             r++
@@ -749,7 +837,9 @@
           for (var i = r; i < e.length; i++) {
             var s = new t.TokenSet(),
               o = e[i]
-            ;(n.edges[o] = s), this.uncheckedNodes.push({ parent: n, char: o, child: s }), (n = s)
+            ;(n.edges[o] = s),
+              this.uncheckedNodes.push({ parent: n, char: o, child: s }),
+              (n = s)
           }
           ;(n.final = !0), (this.previousWord = e)
         }),
@@ -825,10 +915,12 @@
                     $ = new t.Set(A)
                   if (
                     (l.presence == t.Query.presence.REQUIRED &&
-                      ((m = m.union($)), o[p] === void 0 && (o[p] = t.Set.complete)),
+                      ((m = m.union($)),
+                      o[p] === void 0 && (o[p] = t.Set.complete)),
                     l.presence == t.Query.presence.PROHIBITED)
                   ) {
-                    a[p] === void 0 && (a[p] = t.Set.empty), (a[p] = a[p].union($))
+                    a[p] === void 0 && (a[p] = t.Set.empty),
+                      (a[p] = a[p].union($))
                     continue
                   }
                   if (
@@ -842,7 +934,9 @@
                         P = new t.FieldRef(W, p),
                         U = z[W],
                         G
-                      ;(G = r[P]) === void 0 ? (r[P] = new t.MatchData(S, p, U)) : G.add(S, p, U)
+                      ;(G = r[P]) === void 0
+                        ? (r[P] = new t.MatchData(S, p, U))
+                        : G.add(S, p, U)
                     }
                     s[q] = !0
                   }
@@ -854,7 +948,11 @@
                 o[p] = o[p].intersect(m)
               }
           }
-          for (var N = t.Set.complete, M = t.Set.empty, u = 0; u < this.fields.length; u++) {
+          for (
+            var N = t.Set.complete, M = t.Set.empty, u = 0;
+            u < this.fields.length;
+            u++
+          ) {
             var p = this.fields[u]
             o[p] && (N = N.intersect(o[p])), a[p] && (M = M.union(a[p]))
           }
@@ -876,7 +974,8 @@
               var x = this.fieldVectors[T],
                 O = i[T.fieldName].similarity(x),
                 D
-              if ((D = C[d]) !== void 0) (D.score += O), D.matchData.combine(r[T])
+              if ((D = C[d]) !== void 0)
+                (D.score += O), D.matchData.combine(r[T])
               else {
                 var L = { ref: d, score: O, matchData: r[T] }
                 ;(C[d] = L), g.push(L)
@@ -962,7 +1061,10 @@
           this._ref = e
         }),
         (t.Builder.prototype.field = function (e, n) {
-          if (/\//.test(e)) throw new RangeError("Field '" + e + "' contains illegal character '/'")
+          if (/\//.test(e))
+            throw new RangeError(
+              "Field '" + e + "' contains illegal character '/'",
+            )
           this._fields[e] = n || {}
         }),
         (t.Builder.prototype.b = function (e) {
@@ -988,7 +1090,11 @@
               (this.fieldLengths[m] += h.length)
             for (var b = 0; b < h.length; b++) {
               var y = h[b]
-              if ((v[y] == null && (v[y] = 0), (v[y] += 1), this.invertedIndex[y] == null)) {
+              if (
+                (v[y] == null && (v[y] = 0),
+                (v[y] += 1),
+                this.invertedIndex[y] == null)
+              ) {
                 var E = Object.create(null)
                 ;(E._index = this.termIndex), (this.termIndex += 1)
                 for (var f = 0; f < i.length; f++) E[i[f]] = Object.create(null)
@@ -999,7 +1105,8 @@
               for (var p = 0; p < this.metadataWhitelist.length; p++) {
                 var w = this.metadataWhitelist[p],
                   S = y.metadata[w]
-                this.invertedIndex[y][o][r][w] == null && (this.invertedIndex[y][o][r][w] = []),
+                this.invertedIndex[y][o][r][w] == null &&
+                  (this.invertedIndex[y][o][r][w] = []),
                   this.invertedIndex[y][o][r][w].push(S)
               }
             }
@@ -1007,13 +1114,20 @@
         }),
         (t.Builder.prototype.calculateAverageFieldLengths = function () {
           for (
-            var e = Object.keys(this.fieldLengths), n = e.length, r = {}, i = {}, s = 0;
+            var e = Object.keys(this.fieldLengths),
+              n = e.length,
+              r = {},
+              i = {},
+              s = 0;
             s < n;
             s++
           ) {
             var o = t.FieldRef.fromString(e[s]),
               a = o.fieldName
-            i[a] || (i[a] = 0), (i[a] += 1), r[a] || (r[a] = 0), (r[a] += this.fieldLengths[o])
+            i[a] || (i[a] = 0),
+              (i[a] += 1),
+              r[a] || (r[a] = 0),
+              (r[a] += this.fieldLengths[o])
           }
           for (var u = Object.keys(this._fields), s = 0; s < u.length; s++) {
             var l = u[s]
@@ -1052,11 +1166,14 @@
                 I,
                 _
               i[f] === void 0
-                ? ((S = t.idf(this.invertedIndex[f], this.documentCount)), (i[f] = S))
+                ? ((S = t.idf(this.invertedIndex[f], this.documentCount)),
+                  (i[f] = S))
                 : (S = i[f]),
                 (I =
                   (S * ((this._k1 + 1) * p)) /
-                  (this._k1 * (1 - this._b + this._b * (u / this.averageFieldLength[a])) + p)),
+                  (this._k1 *
+                    (1 - this._b + this._b * (u / this.averageFieldLength[a])) +
+                    p)),
                 (I *= b),
                 (I *= y),
                 (_ = Math.round(I * 1e3) / 1e3),
@@ -1067,7 +1184,9 @@
           this.fieldVectors = e
         }),
         (t.Builder.prototype.createTokenSet = function () {
-          this.tokenSet = t.TokenSet.fromArray(Object.keys(this.invertedIndex).sort())
+          this.tokenSet = t.TokenSet.fromArray(
+            Object.keys(this.invertedIndex).sort(),
+          )
         }),
         (t.Builder.prototype.build = function () {
           return (
@@ -1088,12 +1207,18 @@
           n.unshift(this), e.apply(this, n)
         }),
         (t.MatchData = function (e, n, r) {
-          for (var i = Object.create(null), s = Object.keys(r || {}), o = 0; o < s.length; o++) {
+          for (
+            var i = Object.create(null), s = Object.keys(r || {}), o = 0;
+            o < s.length;
+            o++
+          ) {
             var a = s[o]
             i[a] = r[a].slice()
           }
           ;(this.metadata = Object.create(null)),
-            e !== void 0 && ((this.metadata[e] = Object.create(null)), (this.metadata[e][n] = i))
+            e !== void 0 &&
+              ((this.metadata[e] = Object.create(null)),
+              (this.metadata[e][n] = i))
         }),
         (t.MatchData.prototype.combine = function (e) {
           for (var n = Object.keys(e.metadata), r = 0; r < n.length; r++) {
@@ -1103,12 +1228,15 @@
             for (var o = 0; o < s.length; o++) {
               var a = s[o],
                 u = Object.keys(e.metadata[i][a])
-              this.metadata[i][a] == null && (this.metadata[i][a] = Object.create(null))
+              this.metadata[i][a] == null &&
+                (this.metadata[i][a] = Object.create(null))
               for (var l = 0; l < u.length; l++) {
                 var h = u[l]
                 this.metadata[i][a][h] == null
                   ? (this.metadata[i][a][h] = e.metadata[i][a][h])
-                  : (this.metadata[i][a][h] = this.metadata[i][a][h].concat(e.metadata[i][a][h]))
+                  : (this.metadata[i][a][h] = this.metadata[i][a][h].concat(
+                      e.metadata[i][a][h],
+                    ))
               }
             }
           }
@@ -1156,7 +1284,8 @@
         }),
         (t.Query.prototype.isNegated = function () {
           for (var e = 0; e < this.clauses.length; e++)
-            if (this.clauses[e].presence != t.Query.presence.PROHIBITED) return !1
+            if (this.clauses[e].presence != t.Query.presence.PROHIBITED)
+              return !1
           return !0
         }),
         (t.Query.prototype.term = function (e, n) {
@@ -1171,7 +1300,10 @@
           return (r.term = e.toString()), this.clause(r), this
         }),
         (t.QueryParseError = function (e, n, r) {
-          ;(this.name = 'QueryParseError'), (this.message = e), (this.start = n), (this.end = r)
+          ;(this.name = 'QueryParseError'),
+            (this.message = e),
+            (this.start = n),
+            (this.end = r)
         }),
         (t.QueryParseError.prototype = new Error()),
         (t.QueryLexer = function (e) {
@@ -1191,13 +1323,22 @@
             i < this.escapeCharPositions.length;
             i++
           )
-            (r = this.escapeCharPositions[i]), e.push(this.str.slice(n, r)), (n = r + 1)
+            (r = this.escapeCharPositions[i]),
+              e.push(this.str.slice(n, r)),
+              (n = r + 1)
           return (
-            e.push(this.str.slice(n, this.pos)), (this.escapeCharPositions.length = 0), e.join('')
+            e.push(this.str.slice(n, this.pos)),
+            (this.escapeCharPositions.length = 0),
+            e.join('')
           )
         }),
         (t.QueryLexer.prototype.emit = function (e) {
-          this.lexemes.push({ type: e, str: this.sliceString(), start: this.start, end: this.pos }),
+          this.lexemes.push({
+            type: e,
+            str: this.sliceString(),
+            start: this.start,
+            end: this.pos,
+          }),
             (this.start = this.pos)
         }),
         (t.QueryLexer.prototype.escapeCharacter = function () {
@@ -1233,19 +1374,36 @@
         (t.QueryLexer.BOOST = 'BOOST'),
         (t.QueryLexer.PRESENCE = 'PRESENCE'),
         (t.QueryLexer.lexField = function (e) {
-          return e.backup(), e.emit(t.QueryLexer.FIELD), e.ignore(), t.QueryLexer.lexText
+          return (
+            e.backup(),
+            e.emit(t.QueryLexer.FIELD),
+            e.ignore(),
+            t.QueryLexer.lexText
+          )
         }),
         (t.QueryLexer.lexTerm = function (e) {
-          if ((e.width() > 1 && (e.backup(), e.emit(t.QueryLexer.TERM)), e.ignore(), e.more()))
+          if (
+            (e.width() > 1 && (e.backup(), e.emit(t.QueryLexer.TERM)),
+            e.ignore(),
+            e.more())
+          )
             return t.QueryLexer.lexText
         }),
         (t.QueryLexer.lexEditDistance = function (e) {
           return (
-            e.ignore(), e.acceptDigitRun(), e.emit(t.QueryLexer.EDIT_DISTANCE), t.QueryLexer.lexText
+            e.ignore(),
+            e.acceptDigitRun(),
+            e.emit(t.QueryLexer.EDIT_DISTANCE),
+            t.QueryLexer.lexText
           )
         }),
         (t.QueryLexer.lexBoost = function (e) {
-          return e.ignore(), e.acceptDigitRun(), e.emit(t.QueryLexer.BOOST), t.QueryLexer.lexText
+          return (
+            e.ignore(),
+            e.acceptDigitRun(),
+            e.emit(t.QueryLexer.BOOST),
+            t.QueryLexer.lexText
+          )
         }),
         (t.QueryLexer.lexEOS = function (e) {
           e.width() > 0 && e.emit(t.QueryLexer.TERM)
@@ -1262,10 +1420,16 @@
             if (n == ':') return t.QueryLexer.lexField
             if (n == '~')
               return (
-                e.backup(), e.width() > 0 && e.emit(t.QueryLexer.TERM), t.QueryLexer.lexEditDistance
+                e.backup(),
+                e.width() > 0 && e.emit(t.QueryLexer.TERM),
+                t.QueryLexer.lexEditDistance
               )
             if (n == '^')
-              return e.backup(), e.width() > 0 && e.emit(t.QueryLexer.TERM), t.QueryLexer.lexBoost
+              return (
+                e.backup(),
+                e.width() > 0 && e.emit(t.QueryLexer.TERM),
+                t.QueryLexer.lexBoost
+              )
             if ((n == '+' && e.width() === 1) || (n == '-' && e.width() === 1))
               return e.emit(t.QueryLexer.PRESENCE), t.QueryLexer.lexText
             if (n.match(t.QueryLexer.termSeparator)) return t.QueryLexer.lexTerm
@@ -1546,17 +1710,24 @@
           this.onScroll()
       }
       triggerResize() {
-        let n = new CustomEvent('resize', { detail: { width: this.width, height: this.height } })
+        let n = new CustomEvent('resize', {
+          detail: { width: this.width, height: this.height },
+        })
         this.dispatchEvent(n)
       }
       onResize() {
-        ;(this.width = window.innerWidth || 0), (this.height = window.innerHeight || 0)
-        let n = new CustomEvent('resize', { detail: { width: this.width, height: this.height } })
+        ;(this.width = window.innerWidth || 0),
+          (this.height = window.innerHeight || 0)
+        let n = new CustomEvent('resize', {
+          detail: { width: this.width, height: this.height },
+        })
         this.dispatchEvent(n)
       }
       onScroll() {
         this.scrollTop = window.scrollY || 0
-        let n = new CustomEvent('scroll', { detail: { scrollTop: this.scrollTop } })
+        let n = new CustomEvent('scroll', {
+          detail: { scrollTop: this.scrollTop },
+        })
         this.dispatchEvent(n), this.hideShowToolbar()
       }
       hideShowToolbar() {
@@ -1603,7 +1774,9 @@
         n.position = o.top + document.body.scrollTop
       }
       this.anchors.sort((i, s) => i.position - s.position)
-      let r = new CustomEvent('scroll', { detail: { scrollTop: R.instance.scrollTop } })
+      let r = new CustomEvent('scroll', {
+        detail: { scrollTop: R.instance.scrollTop },
+      })
       this.onScroll(r)
     }
     onScroll(n) {
@@ -1614,7 +1787,8 @@
       for (; o > -1 && i[o].position > r; ) o -= 1
       for (; o < s && i[o + 1].position < r; ) o += 1
       this.index != o &&
-        (this.index > -1 && this.anchors[this.index].link.classList.remove('focus'),
+        (this.index > -1 &&
+          this.anchors[this.index].link.classList.remove('focus'),
         (this.index = o),
         this.index > -1 && this.anchors[this.index].link.classList.add('focus'))
     }
@@ -1641,7 +1815,10 @@
         window.searchData && t.classList.remove('loading'))
     let n = document.querySelector('#tsd-search input'),
       r = document.querySelector('#tsd-search .results')
-    if (!n || !r) throw new Error('The input field or the result list wrapper was not found')
+    if (!n || !r)
+      throw new Error(
+        'The input field or the result list wrapper was not found',
+      )
     let i = !1
     r.addEventListener('mousedown', () => (i = !0)),
       r.addEventListener('mouseup', () => {
@@ -1681,7 +1858,9 @@
         s.altKey ||
           s.ctrlKey ||
           s.metaKey ||
-          (!n.matches(':focus') && s.key === '/' && (n.focus(), s.preventDefault()))
+          (!n.matches(':focus') &&
+            s.key === '/' &&
+            (n.focus(), s.preventDefault()))
       })
   }
   function He(t, e) {
@@ -1709,12 +1888,16 @@
     for (let o = 0, a = Math.min(10, s.length); o < a; o++) {
       let u = r.data.rows[Number(s[o].ref)],
         l = pe(u.name, i)
-      globalThis.DEBUG_SEARCH_WEIGHTS && (l += ` (score: ${s[o].score.toFixed(2)})`),
+      globalThis.DEBUG_SEARCH_WEIGHTS &&
+        (l += ` (score: ${s[o].score.toFixed(2)})`),
         u.parent && (l = `<span class="parent">${pe(u.parent, i)}.</span>${l}`)
       let h = document.createElement('li')
       h.classList.value = u.classes ?? ''
       let m = document.createElement('a')
-      ;(m.href = r.base + u.url), (m.innerHTML = l), h.append(m), e.appendChild(h)
+      ;(m.href = r.base + u.url),
+        (m.innerHTML = l),
+        h.append(m),
+        e.appendChild(h)
     }
   }
   function fe(t, e) {
@@ -1748,12 +1931,21 @@
       s = 0,
       o = n.indexOf(r)
     for (; o != -1; )
-      i.push(ie(t.substring(s, o)), `<b>${ie(t.substring(o, o + r.length))}</b>`),
+      i.push(
+        ie(t.substring(s, o)),
+        `<b>${ie(t.substring(o, o + r.length))}</b>`,
+      ),
         (s = o + r.length),
         (o = n.indexOf(r, s))
     return i.push(ie(t.substring(s))), i.join('')
   }
-  var Ne = { '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#039;', '"': '&quot;' }
+  var Ne = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    "'": '&#039;',
+    '"': '&quot;',
+  }
   function ie(t) {
     return t.replace(/[&<>"'"]/g, (e) => Ne[e])
   }
@@ -1765,7 +1957,9 @@
     se = !1,
     je = !1,
     H = !1,
-    xe = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    xe = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent,
+    )
   document.documentElement.classList.add(xe ? 'is-mobile' : 'not-mobile')
   xe &&
     'ontouchstart' in document.documentElement &&
@@ -1822,7 +2016,8 @@
         if (r) {
           let i = window.location.href
           i.indexOf('#') != -1 && (i = i.substring(0, i.indexOf('#'))),
-            r.href.substring(0, i.length) == i && setTimeout(() => this.setActive(!1), 250)
+            r.href.substring(0, i.length) == i &&
+              setTimeout(() => this.setActive(!1), 250)
         }
       }
     }
@@ -1858,7 +2053,9 @@
       return n ? n === 'true' : this.el.checked
     }
     setLocalStorage(n) {
-      Q.setItem(this.key, n.toString()), (this.value = n), this.handleValueChange()
+      Q.setItem(this.key, n.toString()),
+        (this.value = n),
+        this.handleValueChange()
     }
     handleValueChange() {
       ;(this.el.checked = this.value),
@@ -1878,7 +2075,9 @@
       this.calculateHeights(),
         (this.summary = this.el.querySelector('.tsd-accordion-summary')),
         (this.icon = this.summary.querySelector('svg')),
-        (this.key = `tsd-accordion-${this.summary.textContent.replace(/\s+/g, '-').toLowerCase()}`),
+        (this.key = `tsd-accordion-${this.summary.textContent
+          .replace(/\s+/g, '-')
+          .toLowerCase()}`),
         this.setLocalStorage(this.fromLocalStorage(), !0),
         this.summary.addEventListener('click', (r) => this.toggleVisibility(r)),
         (this.icon.style.transform = this.getIconRotation())
@@ -1950,7 +2149,9 @@
     }
     setLocalStorage(n, r = !1) {
       ;(this.fromLocalStorage() === n && !r) ||
-        (Q.setItem(this.key, n.toString()), (this.el.open = n), this.handleValueChange(r))
+        (Q.setItem(this.key, n.toString()),
+        (this.el.open = n),
+        this.handleValueChange(r))
     }
     handleValueChange(n = !1) {
       ;(this.fromLocalStorage() === this.el.open && !n) ||

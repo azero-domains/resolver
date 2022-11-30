@@ -1,6 +1,6 @@
 {
   "name": "@azns/resolver",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.0",
   "license": "MIT",
   "description": "Typescript package for resolving .azero domains.",
   "author": "AZERO Domains <hello@azero.domains> (https://azero.domains)",
@@ -12,14 +12,18 @@
   "bugs": {
     "url": "https://github.com/azero-domains/resolver/issues"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "tsup && npm run typedoc",
+    "build": "tsup --dts && npm run typedoc",
     "typedoc": "typedoc src/index.ts",
-    "dev": "tsup --watch",
+    "dev": "tsup --dts --watch",
     "lint": "prettier . --check && pnpm eslint",
     "lint:fix": "prettier . --write && pnpm eslint --fix",
     "prepare": "husky install"
+  },
+  "dependencies": {
+    "@polkadot/api": "^9.9.4",
+    "@polkadot/api-contract": "^9.9.4"
   },
   "devDependencies": {
     "@types/node": "^16.18.3",
