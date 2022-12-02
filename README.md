@@ -4,7 +4,7 @@
 
 This repository contains a simple Typescript package to resolve `.azero` domains issued by [AZERO Domains](https://azero.domains). It supports resolving domains to their associated SS58 addresses and the other way around.
 
-The documentation can be found here: https://azero-domains.github.io/resolver/.
+📃 **Documentation:** https://azero-domains.github.io/resolver/.
 
 ## Disclaimer 🚨
 
@@ -29,12 +29,15 @@ const address = await resolveName('wojak')
 ## Development
 
 ```bash
+# Install pnpm (https://pnpm.io/)
+npm i -g pnpm
+
 # Install dependencies
-npm i
+pnpm i
 
 # Start tsup in development mode (watching)
-npm run dev
+pnpm dev
 
 # Build the package and generated docs
-npm run build
+pnpm run build
 ```

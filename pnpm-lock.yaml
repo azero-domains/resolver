@@ -15,9 +15,11 @@ specifiers:
   typedoc: ^0.23.21
   typescript: ^4.9.3
 
-devDependencies:
+dependencies:
   '@polkadot/api': 9.9.4
   '@polkadot/api-contract': 9.9.4
+
+devDependencies:
   '@types/node': 16.18.3
   '@typescript-eslint/eslint-plugin': 5.45.0_czs5uoqkd3podpy6vgtsxfc7au
   '@typescript-eslint/parser': 5.45.0_hsf322ms6xhhd4b5ne6lb74y4a
@@ -39,7 +41,7 @@ packages:
     engines: { node: '>=6.9.0' }
     dependencies:
       regenerator-runtime: 0.13.11
-    dev: true
+    dev: false
 
   /@esbuild/android-arm/0.15.16:
     resolution:
@@ -119,14 +121,14 @@ packages:
       {
         integrity: sha512-CE0FCR57H2acVI5UOzIGSSIYxZ6v/HOhDR0Ro9VLyhnzLwx0o8W1mmgaqlEUx4049qJDlIBRztv5k+MM8vbO3A==,
       }
-    dev: true
+    dev: false
 
   /@noble/secp256k1/1.7.0:
     resolution:
       {
         integrity: sha512-kbacwGSsH/CTout0ZnZWxnW1B+jH/7r/WAAKLBtrRJ/+CUH7lgmQzl3GTrQua3SGKWNSDsS6lmjnDpIJ5Dxyaw==,
       }
-    dev: true
+    dev: false
 
   /@nodelib/fs.scandir/2.1.5:
     resolution:
@@ -176,7 +178,7 @@ packages:
       - bufferutil
       - supports-color
       - utf-8-validate
-    dev: true
+    dev: false
 
   /@polkadot/api-base/9.9.4:
     resolution:
@@ -194,7 +196,7 @@ packages:
       - bufferutil
       - supports-color
       - utf-8-validate
-    dev: true
+    dev: false
 
   /@polkadot/api-contract/9.9.4:
     resolution:
@@ -215,7 +217,7 @@ packages:
       - bufferutil
       - supports-color
       - utf-8-validate
-    dev: true
+    dev: false
 
   /@polkadot/api-derive/9.9.4:
     resolution:
@@ -238,7 +240,7 @@ packages:
       - bufferutil
       - supports-color
       - utf-8-validate
-    dev: true
+    dev: false
 
   /@polkadot/api/9.9.4:
     resolution:
@@ -268,7 +270,7 @@ packages:
       - bufferutil
       - supports-color
       - utf-8-validate
-    dev: true
+    dev: false
 
   /@polkadot/keyring/10.1.14:
     resolution:
@@ -280,7 +282,7 @@ packages:
       '@babel/runtime': 7.20.6
       '@polkadot/util': 10.1.14
       '@polkadot/util-crypto': 10.1.14
-    dev: true
+    dev: false
 
   /@polkadot/networks/10.1.14:
     resolution:
@@ -292,7 +294,7 @@ packages:
       '@babel/runtime': 7.20.6
       '@polkadot/util': 10.1.14
       '@substrate/ss58-registry': 1.35.0
-    dev: true
+    dev: false
 
   /@polkadot/rpc-augment/9.9.4:
     resolution:
@@ -310,7 +312,7 @@ packages:
       - bufferutil
       - supports-color
       - utf-8-validate
-    dev: true
+    dev: false
 
   /@polkadot/rpc-core/9.9.4:
     resolution:
@@ -329,7 +331,7 @@ packages:
       - bufferutil
       - supports-color
       - utf-8-validate
-    dev: true
+    dev: false
 
   /@polkadot/rpc-provider/9.9.4:
     resolution:
@@ -355,7 +357,7 @@ packages:
       - bufferutil
       - supports-color
       - utf-8-validate
-    dev: true
+    dev: false
 
   /@polkadot/types-augment/9.9.4:
     resolution:
@@ -368,7 +370,7 @@ packages:
       '@polkadot/types': 9.9.4
       '@polkadot/types-codec': 9.9.4
       '@polkadot/util': 10.1.14
-    dev: true
+    dev: false
 
   /@polkadot/types-codec/9.9.4:
     resolution:
@@ -380,7 +382,7 @@ packages:
       '@babel/runtime': 7.20.6
       '@polkadot/util': 10.1.14
       '@polkadot/x-bigint': 10.1.14
-    dev: true
+    dev: false
 
   /@polkadot/types-create/9.9.4:
     resolution:
@@ -392,7 +394,7 @@ packages:
       '@babel/runtime': 7.20.6
       '@polkadot/types-codec': 9.9.4
       '@polkadot/util': 10.1.14
-    dev: true
+    dev: false
 
   /@polkadot/types-known/9.9.4:
     resolution:
@@ -407,7 +409,7 @@ packages:
       '@polkadot/types-codec': 9.9.4
       '@polkadot/types-create': 9.9.4
       '@polkadot/util': 10.1.14
-    dev: true
+    dev: false
 
   /@polkadot/types-support/9.9.4:
     resolution:
@@ -418,7 +420,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.6
       '@polkadot/util': 10.1.14
-    dev: true
+    dev: false
 
   /@polkadot/types/9.9.4:
     resolution:
@@ -435,7 +437,7 @@ packages:
       '@polkadot/util': 10.1.14
       '@polkadot/util-crypto': 10.1.14
       rxjs: 7.5.7
-    dev: true
+    dev: false
 
   /@polkadot/util-crypto/10.1.14:
     resolution:
@@ -455,7 +457,7 @@ packages:
       '@scure/base': 1.1.1
       ed2curve: 0.3.0
       tweetnacl: 1.0.3
-    dev: true
+    dev: false
 
   /@polkadot/util/10.1.14:
     resolution:
@@ -471,7 +473,7 @@ packages:
       '@polkadot/x-textencoder': 10.1.14
       '@types/bn.js': 5.1.1
       bn.js: 5.2.1
-    dev: true
+    dev: false
 
   /@polkadot/wasm-bridge/6.3.1_4k26yyd4hvb4qlrlenu4uyumaq:
     resolution:
@@ -486,7 +488,7 @@ packages:
       '@babel/runtime': 7.20.6
       '@polkadot/util': 10.1.14
       '@polkadot/x-randomvalues': 10.1.14
-    dev: true
+    dev: false
 
   /@polkadot/wasm-crypto-asmjs/6.3.1_@polkadot+util@10.1.14:
     resolution:
@@ -499,7 +501,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.6
       '@polkadot/util': 10.1.14
-    dev: true
+    dev: false
 
   /@polkadot/wasm-crypto-init/6.3.1_4k26yyd4hvb4qlrlenu4uyumaq:
     resolution:
@@ -517,7 +519,7 @@ packages:
       '@polkadot/wasm-crypto-asmjs': 6.3.1_@polkadot+util@10.1.14
       '@polkadot/wasm-crypto-wasm': 6.3.1_@polkadot+util@10.1.14
       '@polkadot/x-randomvalues': 10.1.14
-    dev: true
+    dev: false
 
   /@polkadot/wasm-crypto-wasm/6.3.1_@polkadot+util@10.1.14:
     resolution:
@@ -531,7 +533,7 @@ packages:
       '@babel/runtime': 7.20.6
       '@polkadot/util': 10.1.14
       '@polkadot/wasm-util': 6.3.1_@polkadot+util@10.1.14
-    dev: true
+    dev: false
 
   /@polkadot/wasm-crypto/6.3.1_4k26yyd4hvb4qlrlenu4uyumaq:
     resolution:
@@ -551,7 +553,7 @@ packages:
       '@polkadot/wasm-crypto-wasm': 6.3.1_@polkadot+util@10.1.14
       '@polkadot/wasm-util': 6.3.1_@polkadot+util@10.1.14
       '@polkadot/x-randomvalues': 10.1.14
-    dev: true
+    dev: false
 
   /@polkadot/wasm-util/6.3.1_@polkadot+util@10.1.14:
     resolution:
@@ -564,7 +566,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.6
       '@polkadot/util': 10.1.14
-    dev: true
+    dev: false
 
   /@polkadot/x-bigint/10.1.14:
     resolution:
@@ -575,7 +577,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.6
       '@polkadot/x-global': 10.1.14
-    dev: true
+    dev: false
 
   /@polkadot/x-fetch/10.1.14:
     resolution:
@@ -588,7 +590,7 @@ packages:
       '@polkadot/x-global': 10.1.14
       '@types/node-fetch': 2.6.2
       node-fetch: 3.3.0
-    dev: true
+    dev: false
 
   /@polkadot/x-global/10.1.14:
     resolution:
@@ -598,7 +600,7 @@ packages:
     engines: { node: '>=14.0.0' }
     dependencies:
       '@babel/runtime': 7.20.6
-    dev: true
+    dev: false
 
   /@polkadot/x-randomvalues/10.1.14:
     resolution:
@@ -609,7 +611,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.6
       '@polkadot/x-global': 10.1.14
-    dev: true
+    dev: false
 
   /@polkadot/x-textdecoder/10.1.14:
     resolution:
@@ -620,7 +622,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.6
       '@polkadot/x-global': 10.1.14
-    dev: true
+    dev: false
 
   /@polkadot/x-textencoder/10.1.14:
     resolution:
@@ -631,7 +633,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.6
       '@polkadot/x-global': 10.1.14
-    dev: true
+    dev: false
 
   /@polkadot/x-ws/10.1.14:
     resolution:
@@ -646,21 +648,21 @@ packages:
       websocket: 1.0.34
     transitivePeerDependencies:
       - supports-color
-    dev: true
+    dev: false
 
   /@scure/base/1.1.1:
     resolution:
       {
         integrity: sha512-ZxOhsSyxYwLJj3pLZCefNitxsj093tb2vq90mp2txoYeBqbcjDjqFhyM8eUjq/uFm6zJ+mUuqxlS2FkuSY1MTA==,
       }
-    dev: true
+    dev: false
 
   /@substrate/connect-extension-protocol/1.0.1:
     resolution:
       {
         integrity: sha512-161JhCC1csjH3GE5mPLEd7HbWtwNSPJBg3p1Ksz9SFlTzj/bgEwudiRN2y5i0MoLGCIJRYKyKGMxVnd29PzNjg==,
       }
-    dev: true
+    dev: false
 
   /@substrate/connect/0.7.17:
     resolution:
@@ -674,7 +676,7 @@ packages:
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
-    dev: true
+    dev: false
 
   /@substrate/smoldot-light/0.7.7:
     resolution:
@@ -687,14 +689,14 @@ packages:
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
-    dev: true
+    dev: false
 
   /@substrate/ss58-registry/1.35.0:
     resolution:
       {
         integrity: sha512-cIY3J7RlT4mfPNFwd2mv1q9vTp/shImw2gN2y2outMhOcagH/HG+W8/JohpifjxPC/1pbQ0Z8nxfL5Td3EchcA==,
       }
-    dev: true
+    dev: false
 
   /@types/bn.js/5.1.1:
     resolution:
@@ -703,7 +705,7 @@ packages:
       }
     dependencies:
       '@types/node': 16.18.3
-    dev: true
+    dev: false
 
   /@types/json-schema/7.0.11:
     resolution:
@@ -720,14 +722,13 @@ packages:
     dependencies:
       '@types/node': 16.18.3
       form-data: 3.0.1
-    dev: true
+    dev: false
 
   /@types/node/16.18.3:
     resolution:
       {
         integrity: sha512-jh6m0QUhIRcZpNv7Z/rpN+ZWXOicUUQbSoWks7Htkbb9IjFQj4kzcX/xFCkjstCj5flMsN8FiSvt+q+Tcs4Llg==,
       }
-    dev: true
 
   /@types/semver/7.3.13:
     resolution:
@@ -743,7 +744,7 @@ packages:
       }
     dependencies:
       '@types/node': 16.18.3
-    dev: true
+    dev: false
 
   /@typescript-eslint/eslint-plugin/5.45.0_czs5uoqkd3podpy6vgtsxfc7au:
     resolution:
@@ -1031,7 +1032,7 @@ packages:
       {
         integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==,
       }
-    dev: true
+    dev: false
 
   /balanced-match/1.0.2:
     resolution:
@@ -1053,7 +1054,7 @@ packages:
       {
         integrity: sha512-eXRvHzWyYPBuB4NBy0cmYQjGitUrtqwbvlzP3G6VFnNRbsZQIxQ10PbKKHt8gZ/HW/D/747aDl+QkDqg3KQLMQ==,
       }
-    dev: true
+    dev: false
 
   /brace-expansion/1.1.11:
     resolution:
@@ -1093,7 +1094,7 @@ packages:
     requiresBuild: true
     dependencies:
       node-gyp-build: 4.5.0
-    dev: true
+    dev: false
 
   /bundle-require/3.1.2_esbuild@0.15.16:
     resolution:
@@ -1225,7 +1226,7 @@ packages:
     engines: { node: '>= 0.8' }
     dependencies:
       delayed-stream: 1.0.0
-    dev: true
+    dev: false
 
   /commander/4.1.1:
     resolution:
@@ -1270,7 +1271,7 @@ packages:
     dependencies:
       es5-ext: 0.10.62
       type: 1.2.0
-    dev: true
+    dev: false
 
   /data-uri-to-buffer/4.0.0:
     resolution:
@@ -1278,7 +1279,7 @@ packages:
         integrity: sha512-Vr3mLBA8qWmcuschSLAOogKgQ/Jwxulv3RNE4FXnYWRGujzrRWQI4m12fQqRkwX06C0KanhLr4hK+GydchZsaA==,
       }
     engines: { node: '>= 12' }
-    dev: true
+    dev: false
 
   /debug/2.6.9:
     resolution:
@@ -1292,7 +1293,7 @@ packages:
         optional: true
     dependencies:
       ms: 2.0.0
-    dev: true
+    dev: false
 
   /debug/4.3.4:
     resolution:
@@ -1307,7 +1308,6 @@ packages:
         optional: true
     dependencies:
       ms: 2.1.2
-    dev: true
 
   /deep-is/0.1.4:
     resolution:
@@ -1322,7 +1322,7 @@ packages:
         integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==,
       }
     engines: { node: '>=0.4.0' }
-    dev: true
+    dev: false
 
   /dir-glob/3.0.1:
     resolution:
@@ -1358,7 +1358,7 @@ packages:
       }
     dependencies:
       tweetnacl: 1.0.3
-    dev: true
+    dev: false
 
   /emoji-regex/8.0.0:
     resolution:
@@ -1385,7 +1385,7 @@ packages:
       es6-iterator: 2.0.3
       es6-symbol: 3.1.3
       next-tick: 1.1.0
-    dev: true
+    dev: false
 
   /es6-iterator/2.0.3:
     resolution:
@@ -1396,7 +1396,7 @@ packages:
       d: 1.0.1
       es5-ext: 0.10.62
       es6-symbol: 3.1.3
-    dev: true
+    dev: false
 
   /es6-symbol/3.1.3:
     resolution:
@@ -1406,7 +1406,7 @@ packages:
     dependencies:
       d: 1.0.1
       ext: 1.7.0
-    dev: true
+    dev: false
 
   /esbuild-android-64/0.15.16:
     resolution:
@@ -1864,7 +1864,7 @@ packages:
       {
         integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==,
       }
-    dev: true
+    dev: false
 
   /execa/5.1.1:
     resolution:
@@ -1909,7 +1909,7 @@ packages:
       }
     dependencies:
       type: 2.7.2
-    dev: true
+    dev: false
 
   /fast-deep-equal/3.1.3:
     resolution:
@@ -1964,7 +1964,7 @@ packages:
     dependencies:
       node-domexception: 1.0.0
       web-streams-polyfill: 3.2.1
-    dev: true
+    dev: false
 
   /file-entry-cache/6.0.1:
     resolution:
@@ -2025,7 +2025,7 @@ packages:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.35
-    dev: true
+    dev: false
 
   /formdata-polyfill/4.0.10:
     resolution:
@@ -2035,7 +2035,7 @@ packages:
     engines: { node: '>=12.20.0' }
     dependencies:
       fetch-blob: 3.2.0
-    dev: true
+    dev: false
 
   /fs.realpath/1.0.0:
     resolution:
@@ -2309,7 +2309,7 @@ packages:
       {
         integrity: sha512-cyA56iCMHAh5CdzjJIa4aohJyeO1YbwLi3Jc35MmRU6poroFjIGZzUzupGiRPOjgHg9TLu43xbpwXk523fMxKA==,
       }
-    dev: true
+    dev: false
 
   /isexe/2.0.0:
     resolution:
@@ -2362,7 +2362,7 @@ packages:
       {
         integrity: sha512-ZClg6AaYvamvYEE82d3Iyd3vSSIjQ+odgjaTzRuO3s7toCdFKczob2i0zCh7JE8kWn17yvAWhUVxvqGwUalsRA==,
       }
-    dev: true
+    dev: false
 
   /jsonc-parser/3.2.0:
     resolution:
@@ -2482,7 +2482,7 @@ packages:
       {
         integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==,
       }
-    dev: true
+    dev: false
 
   /log-update/4.0.0:
     resolution:
@@ -2555,7 +2555,7 @@ packages:
         integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==,
       }
     engines: { node: '>= 0.6' }
-    dev: true
+    dev: false
 
   /mime-types/2.1.35:
     resolution:
@@ -2565,7 +2565,7 @@ packages:
     engines: { node: '>= 0.6' }
     dependencies:
       mime-db: 1.52.0
-    dev: true
+    dev: false
 
   /mimic-fn/2.1.0:
     resolution:
@@ -2608,21 +2608,20 @@ packages:
         integrity: sha512-3DeNIcsQixWHHKk6NdoBhWI4t1VMj5/HzfnI1rE/pLl5qKx7+gd4DNA07ehTaZ6MoUU053si6Hd+YtiM/tQZfg==,
       }
     engines: { node: '>= 8' }
-    dev: true
+    dev: false
 
   /ms/2.0.0:
     resolution:
       {
         integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==,
       }
-    dev: true
+    dev: false
 
   /ms/2.1.2:
     resolution:
       {
         integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==,
       }
-    dev: true
 
   /mz/2.7.0:
     resolution:
@@ -2654,7 +2653,7 @@ packages:
       {
         integrity: sha512-CXdUiJembsNjuToQvxayPZF9Vqht7hewsvy2sOWafLvi2awflj9mOC6bHIg50orX8IJvWKY9wYQ/zB2kogPslQ==,
       }
-    dev: true
+    dev: false
 
   /nock/13.2.9:
     resolution:
@@ -2669,7 +2668,7 @@ packages:
       propagate: 2.0.1
     transitivePeerDependencies:
       - supports-color
-    dev: true
+    dev: false
 
   /node-domexception/1.0.0:
     resolution:
@@ -2677,7 +2676,7 @@ packages:
         integrity: sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==,
       }
     engines: { node: '>=10.5.0' }
-    dev: true
+    dev: false
 
   /node-fetch/3.3.0:
     resolution:
@@ -2689,7 +2688,7 @@ packages:
       data-uri-to-buffer: 4.0.0
       fetch-blob: 3.2.0
       formdata-polyfill: 4.0.10
-    dev: true
+    dev: false
 
   /node-gyp-build/4.5.0:
     resolution:
@@ -2697,7 +2696,7 @@ packages:
         integrity: sha512-2iGbaQBV+ITgCz76ZEjmhUKAKVf7xfY1sRl4UiKQspfZMH2h06SyhNsnSVy50cwkFQDGLyif6m/6uFXHkOZ6rg==,
       }
     hasBin: true
-    dev: true
+    dev: false
 
   /normalize-path/3.0.0:
     resolution:
@@ -2821,7 +2820,7 @@ packages:
       {
         integrity: sha512-w+eufiZ1WuJYgPXbV/PO3NCMEc3xqylkKHzp8bxp1uW4qaSNQUkwmLLEc3kKsfz8lpV1F8Ht3U1Cm+9Srog2ug==,
       }
-    dev: true
+    dev: false
 
   /parent-module/1.0.1:
     resolution:
@@ -2940,7 +2939,7 @@ packages:
         integrity: sha512-vGrhOavPSTz4QVNuBNdcNXePNdNMaO1xj9yBeH1ScQPjk/rhg9sSlCXPhMkFuaNNW/syTvYqsnbIJxMBfRbbag==,
       }
     engines: { node: '>= 8' }
-    dev: true
+    dev: false
 
   /punycode/2.1.1:
     resolution:
@@ -2972,7 +2971,7 @@ packages:
       {
         integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==,
       }
-    dev: true
+    dev: false
 
   /regexpp/3.2.0:
     resolution:
@@ -3061,7 +3060,6 @@ packages:
       }
     dependencies:
       tslib: 2.4.1
-    dev: true
 
   /semver/7.3.8:
     resolution:
@@ -3344,7 +3342,6 @@ packages:
       {
         integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==,
       }
-    dev: true
 
   /tsup/6.5.0_typescript@4.9.3:
     resolution:
@@ -3403,7 +3400,7 @@ packages:
       {
         integrity: sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==,
       }
-    dev: true
+    dev: false
 
   /type-check/0.4.0:
     resolution:
@@ -3436,14 +3433,14 @@ packages:
       {
         integrity: sha512-+5nt5AAniqsCnu2cEQQdpzCAh33kVx8n0VoFidKpB1dVVLAN/F+bgVOqOJqOnEnrhp222clB5p3vUlD+1QAnfg==,
       }
-    dev: true
+    dev: false
 
   /type/2.7.2:
     resolution:
       {
         integrity: sha512-dzlvlNlt6AXU7EBSfpAscydQ7gXB+pPGsPnfJnZpiNJBDj7IaJzQlBZYGdEi4R9HmPdBv2XmWJ6YUtoTa7lmCw==,
       }
-    dev: true
+    dev: false
 
   /typedarray-to-buffer/3.1.5:
     resolution:
@@ -3452,7 +3449,7 @@ packages:
       }
     dependencies:
       is-typedarray: 1.0.0
-    dev: true
+    dev: false
 
   /typedoc/0.23.21_typescript@4.9.3:
     resolution:
@@ -3498,7 +3495,7 @@ packages:
     requiresBuild: true
     dependencies:
       node-gyp-build: 4.5.0
-    dev: true
+    dev: false
 
   /vscode-oniguruma/1.7.0:
     resolution:
@@ -3520,7 +3517,7 @@ packages:
         integrity: sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==,
       }
     engines: { node: '>= 8' }
-    dev: true
+    dev: false
 
   /webidl-conversions/4.0.2:
     resolution:
@@ -3544,7 +3541,7 @@ packages:
       yaeti: 0.0.6
     transitivePeerDependencies:
       - supports-color
-    dev: true
+    dev: false
 
   /whatwg-url/7.1.0:
     resolution:
@@ -3621,7 +3618,7 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
-    dev: true
+    dev: false
 
   /yaeti/0.0.6:
     resolution:
@@ -3629,7 +3626,7 @@ packages:
         integrity: sha512-MvQa//+KcZCUkBTIC9blM+CU9J2GzuTytsOUwf2lidtvkx/6gnEp1QvJv34t9vdjhFmha/mUiNDbN0D0mJWdug==,
       }
     engines: { node: '>=0.10.32' }
-    dev: true
+    dev: false
 
   /yallist/4.0.0:
     resolution:
