@@ -23,9 +23,10 @@
     "dev": "tsup --dts --watch",
     "lint": "prettier . --check && pnpm eslint",
     "lint:fix": "prettier . --write && pnpm eslint --fix",
+    "release": "release-it",
     "prepare": "husky install"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@polkadot/api": "^9.9.4",
     "@polkadot/api-contract": "^9.9.4"
   },
@@ -38,6 +39,7 @@
     "husky": "^8.0.2",
     "lint-staged": "^13.0.4",
     "prettier": "^2.8.0",
+    "release-it": "^15.5.0",
     "tsup": "^6.5.0",
     "typedoc": "^0.23.21",
     "typescript": "^4.9.3"
