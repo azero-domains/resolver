@@ -41,3 +41,9 @@ pnpm dev
 # Build the package and generated docs
 pnpm run build
 ```
+
+## Release
+
+```bash
+GITHUB_TOKEN=… pnpm release-it
+```
